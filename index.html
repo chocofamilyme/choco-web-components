@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Choco Web Components</title>
+		<link rel="stylesheet" href="style.css" />
+		<script type="module" src="/dist/ChocoCheckbox.js"></script>
+		<script type="module" src="/dist/ChocoCard.js"></script>
+	</head>
+	<body>
+		<choco-checkbox value="1" class="temp">Текст</choco-checkbox>
+		<choco-checkbox value="2" class="temp">Текст</choco-checkbox>
+
+		<choco-card
+			image="https://rahmet.object.pscloud.io/static-files/assets/takeaway/img/kikis.jpg"
+			alt="KIKI's"
+		>
+			<span slot="title">Title</span>
+			<span slot="description">Description</span>
+			<span slot="overlay">Overlay</span>
+			<div slot="top">Top</div>
+		</choco-card>
+
+		<script>
+			const _eventHandler = event => console.log(event);
+
+			const checkbox = document.querySelectorAll('.temp');
+			checkbox.forEach(c => {
+				c.addEventListener('click', _eventHandler);
+				c.addEventListener('input', _eventHandler);
+			});
+		</script>
+	</body>
+</html>
