@@ -5,9 +5,10 @@
 		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Choco Web Components</title>
-		<link rel="stylesheet" href="style.css" />
 		<script type="module" src="/dist/ChocoCheckbox.js"></script>
 		<script type="module" src="/dist/ChocoCard.js"></script>
+		<script type="module" src="/dist/ChocoButton.js"></script>
+		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
 		<choco-checkbox value="1" class="temp">Текст</choco-checkbox>
@@ -23,8 +24,10 @@
 			<div slot="top">Top</div>
 		</choco-card>
 
+		<choco-button size="lg" type="dark">hi</choco-button>
+
 		<script>
-			const _eventHandler = event => console.log(event);
+			const _eventHandler = event => console.log(event.target.value, event);
 
 			const checkbox = document.querySelectorAll('.temp');
 			checkbox.forEach(c => {
