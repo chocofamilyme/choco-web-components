@@ -6,8 +6,8 @@
 </script>
 
 <label class="choco-checkbox">
-	<input type="checkbox" {value} on:input />
-	<span class="choco-checkbox__mark" />
+	<input type="checkbox" bind:value on:input />
+	<span class="choco-checkbox__mark" on:click|stopPropagation />
 	<span class="choco-checkbox__text">{label}</span>
 
 	<!-- Слот -->
