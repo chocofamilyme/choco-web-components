@@ -1,7 +1,7 @@
 <svelte:options customElement="choco-loader" />
 
 <script lang="ts">
-	export let size: 'lg' | 'md' | 'base' | 'sm' = 'base';
+	export let size: 'sm' | 'base' | 'lg' | 'xl' = 'base';
 	export let box: boolean = false;
 	export let color: string = '#fff';
 </script>
