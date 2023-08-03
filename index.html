@@ -8,6 +8,8 @@
 		<link rel="stylesheet" href="style.css" />
 		<script type="module" src="/dist/ChocoCheckbox.js"></script>
 		<script type="module" src="/dist/ChocoCard.js"></script>
+		<script type="module" src="/dist/ChocoButton.js"></script>
+		<script type="module" src="/dist/ChocoLoader.js"></script>
 	</head>
 	<body>
 		<choco-checkbox value="1" class="temp">Текст</choco-checkbox>
@@ -23,8 +25,11 @@
 			<div slot="top">Top</div>
 		</choco-card>
 
+		<choco-button type="primary" href="twitter.com">Twitter</choco-button>
+		<choco-button type="primary" loading>Loading</choco-button>
+
 		<script>
-			const _eventHandler = event => console.log(event);
+			const _eventHandler = event => console.dir(event);
 
 			const checkbox = document.querySelectorAll('.temp');
 			checkbox.forEach(c => {
