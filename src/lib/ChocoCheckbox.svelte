@@ -1,8 +1,8 @@
 <svelte:options customElement="choco-checkbox" />
 
 <script lang="ts">
-	export let label: string = '',
-		val: unknown;
+	export let label: string = '';
+	export let val: unknown;
 </script>
 
 <label class="choco-checkbox">
