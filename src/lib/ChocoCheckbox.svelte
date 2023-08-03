@@ -2,11 +2,11 @@
 
 <script lang="ts">
 	export let label: string = '',
-		value: unknown;
+		val: unknown;
 </script>
 
 <label class="choco-checkbox">
-	<input type="checkbox" {value} on:input />
+	<input type="checkbox" value={val} on:input />
 	<span class="choco-checkbox__mark" />
 	<span class="choco-checkbox__text">{label}</span>
 
